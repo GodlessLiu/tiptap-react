@@ -39,6 +39,7 @@
     "vite-plugin-dts": "^3.6.4"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.3",
     "@tiptap/extension-blockquote": "^2.1.13",
     "@tiptap/extension-bold": "^2.1.13",
     "@tiptap/extension-bullet-list": "^2.1.13",
