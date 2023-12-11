@@ -2,7 +2,8 @@ import Bold, { BoldOptions } from '@tiptap/extension-bold';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { MaterialSymbolsFormatBoldRounded } from '../../icons/BoldIcon';
-export default Bold.extend<BoldOptions>({
+import { BaseOptions } from '../../types';
+export default Bold.extend<BoldOptions & BaseOptions>({
   name: 'laf-bold',
   addOptions() {
     return {

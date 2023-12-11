@@ -2,8 +2,9 @@ import Underline, { UnderlineOptions } from '@tiptap/extension-underline';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { MdiFormatUnderline } from '../../icons/UnderlineCode';
+import { BaseOptions } from '../../types';
 
-export default Underline.extend<UnderlineOptions>({
+export default Underline.extend<UnderlineOptions & BaseOptions>({
   name: 'laf-underline',
   addOptions() {
     return {

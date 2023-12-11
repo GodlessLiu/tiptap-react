@@ -21,3 +21,7 @@ export interface BubbleItemProps {
 export interface ImageExtraOptions {
   upload?: (file: File) => any;
 }
+
+export interface BaseOptions {
+  getToolbarItems?: (props: EditorProps) => BubbleItem[] | BubbleItem;
+}

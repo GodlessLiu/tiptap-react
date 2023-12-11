@@ -3,8 +3,9 @@ import { PluginKey, Plugin } from '@tiptap/pm/state';
 import { Decoration, DecorationSet } from '@tiptap/pm/view';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
+import { BaseOptions } from '../../types';
 
-const Heading = TiptapHeading.extend<HeadingOptions>({
+const Heading = TiptapHeading.extend<HeadingOptions & BaseOptions>({
   addOptions() {
     let that = this;
     return {

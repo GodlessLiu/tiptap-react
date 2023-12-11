@@ -2,8 +2,9 @@ import InlineCode, { CodeOptions } from '@tiptap/extension-code';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { IcOutlineCode } from '../../icons/InlineCodeIcon';
+import { BaseOptions } from '../../types';
 
-export default InlineCode.extend<CodeOptions>({
+export default InlineCode.extend<CodeOptions & BaseOptions>({
   addOptions() {
     return {
       ...this.parent?.(),

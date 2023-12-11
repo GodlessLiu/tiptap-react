@@ -6,8 +6,9 @@ import {
   MaterialSymbolsAlignCenter,
   MaterialSymbolsAlignHorizontalRight,
 } from '../../icons/TextAlign';
+import { BaseOptions } from '../../types';
 
-export default TextAlign.extend<TextAlignOptions>({
+export default TextAlign.extend<TextAlignOptions & BaseOptions>({
   name: 'laf-text-align',
   addOptions() {
     return {
@@ -32,7 +33,7 @@ export default TextAlign.extend<TextAlignOptions>({
             component: CommonToolBar,
             props: {
               editor,
-              title: 'left',
+              title: 'center',
               Icon: MaterialSymbolsAlignCenter,
               isActive: () => editor.isActive({ textAlign: 'center' }),
               action: () => {

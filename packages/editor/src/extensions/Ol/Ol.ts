@@ -3,8 +3,9 @@ import ListItem from '@tiptap/extension-list-item';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { MdiOrderNumericAscending } from '../../icons/OrderListIcon';
+import { BaseOptions } from '../../types';
 
-export default OrderList.extend<OrderedListOptions>({
+export default OrderList.extend<OrderedListOptions & BaseOptions>({
   addOptions() {
     return {
       ...this.parent?.(),

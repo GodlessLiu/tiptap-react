@@ -18,6 +18,7 @@
 - image
 - link
 - Strike
+- Horizontal
 
 # TODO
 - [x] 美化header

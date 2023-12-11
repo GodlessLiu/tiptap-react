@@ -4,9 +4,9 @@ import TiptapBlockquote, {
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { GrommetIconsBlockQuote } from '../../icons/BlockQuoteIcon';
+import { BaseOptions } from '../../types';
 
-export default TiptapBlockquote.extend<BlockquoteOptions>({
-  name: 'laf-blockquote',
+export default TiptapBlockquote.extend<BlockquoteOptions & BaseOptions>({
   addOptions() {
     return {
       ...this.parent?.(),
@@ -19,7 +19,7 @@ export default TiptapBlockquote.extend<BlockquoteOptions>({
               editor,
               title: 'Blockquote',
               Icon: GrommetIconsBlockQuote,
-              isActive: () => editor.isActive('laf-blockquote'),
+              isActive: () => editor.isActive('blockquote'),
               action: () => {
                 editor.chain().focus().toggleBlockquote().run();
               },

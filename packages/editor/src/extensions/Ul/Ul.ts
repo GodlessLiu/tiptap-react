@@ -3,8 +3,8 @@ import ListItem from '@tiptap/extension-list-item';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
 import { IcBaselineFormatListBulleted } from '../../icons/BulletList';
-export default BulletList.extend<BulletListOptions>({
-  name: 'laf-ul',
+import { BaseOptions } from '../../types';
+export default BulletList.extend<BulletListOptions & BaseOptions>({
   addOptions() {
     return {
       ...this.parent?.(),
@@ -16,7 +16,7 @@ export default BulletList.extend<BulletListOptions>({
             editor,
             title: 'ul',
             Icon: IcBaselineFormatListBulleted,
-            isActive: () => editor.isActive('laf-ul'),
+            isActive: () => editor.isActive('bullet-list'),
             action: () => {
               editor.chain().focus().toggleBulletList().run();
             },

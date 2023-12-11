@@ -1,8 +1,8 @@
 import Image, { ImageOptions } from '@tiptap/extension-image';
 import { PluginKey, Plugin } from '@tiptap/pm/state';
-import { ImageExtraOptions } from '../../types';
+import { BaseOptions, ImageExtraOptions } from '../../types';
 
-export default Image.extend<ImageOptions & ImageExtraOptions>({
+export default Image.extend<ImageOptions & ImageExtraOptions & BaseOptions>({
   addAttributes() {
     return {
       ...this.parent?.(),

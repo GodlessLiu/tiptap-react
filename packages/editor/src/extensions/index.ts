@@ -15,6 +15,10 @@ import TextAlign from './TextAlign/TextAlign';
 import Link from './Link/Link';
 import Strike from './Strike/Strike';
 import Placeholder from './Placeholder/Placeholder';
+import Horizontal from './Horizontal/Horizontal';
+import TaskList from './TaskList/TaskList';
+import History from './History/History';
+import lowlight from './CodeBlock/lowLight';
 const allExtensions = [
   Text,
   Heading,
@@ -23,7 +27,9 @@ const allExtensions = [
   Blockquote,
   Ul,
   Ol,
-  CodeBlock,
+  CodeBlock.configure({
+    lowlight,
+  }),
   Bold,
   Italic,
   InlineCode,
@@ -45,6 +51,9 @@ const allExtensions = [
   Placeholder.configure({
     placeholder: 'write something ...',
   }),
+  Horizontal,
+  TaskList,
+  History,
 ];
 
 export {
@@ -66,4 +75,8 @@ export {
   Link,
   Strike,
   Placeholder,
+  Horizontal,
+  TaskList,
+  History,
+  lowlight,
 };
