@@ -1,6 +1,7 @@
 import Italic, { ItalicOptions } from '@tiptap/extension-italic';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
+import { MdiFormatItalic } from '../../icons/ItalicIcon';
 
 export default Italic.extend<ItalicOptions>({
   addOptions() {
@@ -11,6 +12,7 @@ export default Italic.extend<ItalicOptions>({
           priority: 60,
           component: CommonToolBar,
           props: {
+            Icon: MdiFormatItalic,
             editor,
             title: 'italic',
             isActive: () => editor.isActive('italic'),

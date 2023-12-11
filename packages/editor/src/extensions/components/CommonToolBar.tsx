@@ -1,7 +1,7 @@
 import { BubbleItemProps } from '../../types';
 
 const CommonToolBar = (props: BubbleItemProps) => {
-  const { title, action, isActive } = props;
+  const { title, action, isActive, Icon } = props;
 
   return (
     <>
@@ -11,7 +11,7 @@ const CommonToolBar = (props: BubbleItemProps) => {
         }}
         className={`${isActive!() ? 'is-active' : ''} mx-1`}
       >
-        {title}
+        {Icon ? <Icon /> : title}
       </span>
     </>
   );

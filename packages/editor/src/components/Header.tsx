@@ -24,7 +24,7 @@ const Header: React.FC<EditorProps> = (props: EditorProps) => {
 
   return (
     <>
-      <div className="editor-header">
+      <div className="editor-header flex flex-row gap-2 flex-wrap">
         {menus?.map((menu) => {
           const Comp = menu!.component!;
           return <Comp {...menu!.props} editor={editor} />;

@@ -13,8 +13,8 @@ export interface BubbleItemProps {
   editor: Editor;
   isActive?: () => boolean;
   visible?: boolean;
-  iconStyle?: string;
   title?: string;
+  Icon?: (props: any) => JSX.Element;
   action?: () => void;
 }
 

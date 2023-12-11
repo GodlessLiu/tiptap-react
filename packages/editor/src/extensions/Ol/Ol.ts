@@ -2,6 +2,7 @@ import OrderList, { OrderedListOptions } from '@tiptap/extension-ordered-list';
 import ListItem from '@tiptap/extension-list-item';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
+import { MdiOrderNumericAscending } from '../../icons/OrderListIcon';
 
 export default OrderList.extend<OrderedListOptions>({
   addOptions() {
@@ -14,6 +15,7 @@ export default OrderList.extend<OrderedListOptions>({
           props: {
             editor,
             title: 'ol',
+            Icon: MdiOrderNumericAscending,
             isActive: () => editor.isActive('orderedList'),
             action: () => {
               editor.chain().focus().toggleOrderedList().run();

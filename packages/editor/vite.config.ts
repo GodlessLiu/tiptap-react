@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import Icons from 'unplugin-icons/vite';
 export default ({ mode }: { mode: string }) => {
   const isProduction = mode === 'production';
   return defineConfig({
@@ -15,6 +16,10 @@ export default ({ mode }: { mode: string }) => {
           outDir: './dist',
           insertTypesEntry: true,
         }),
+      Icons({
+        compiler: 'jsx',
+        jsx: 'react',
+      }),
     ],
     define: {
       'process.env': process.env,

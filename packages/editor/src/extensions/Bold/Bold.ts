@@ -1,6 +1,7 @@
 import Bold, { BoldOptions } from '@tiptap/extension-bold';
 import { Editor } from '@tiptap/react';
 import CommonToolBar from '../components/CommonToolBar';
+import { MaterialSymbolsFormatBoldRounded } from '../../icons/BoldIcon';
 export default Bold.extend<BoldOptions>({
   name: 'laf-bold',
   addOptions() {
@@ -13,6 +14,7 @@ export default Bold.extend<BoldOptions>({
           props: {
             editor,
             title: 'bold',
+            Icon: MaterialSymbolsFormatBoldRounded,
             isActive: () => editor.isActive('laf-bold'),
             action: () => {
               editor.chain().focus().toggleBold().run();
