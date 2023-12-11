@@ -1,0 +1,65 @@
+{
+  "name": "@laf/rich-editor",
+  "version": "0.0.1",
+  "description": "a rich-text editor for React",
+  "main": "./dist/rich-text-editor.iife.js",
+  "module": "./dist/rich-text-editor.es.js",
+  "unpkg": "./dist/rich-text-editor.iife.js",
+  "jsdelivr": "./dist/rich-text-editor.iife.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "react",
+    "editor",
+    "richtext",
+    "tiptap"
+  ],
+  "author": "Hilary Liu<2788370451@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.7",
+    "vite-plugin-dts": "^3.6.4"
+  },
+  "dependencies": {
+    "@tiptap/extension-blockquote": "^2.1.13",
+    "@tiptap/extension-bold": "^2.1.13",
+    "@tiptap/extension-bullet-list": "^2.1.13",
+    "@tiptap/extension-code": "^2.1.13",
+    "@tiptap/extension-code-block": "^2.1.13",
+    "@tiptap/extension-document": "^2.1.13",
+    "@tiptap/extension-heading": "^2.1.13",
+    "@tiptap/extension-image": "^2.1.13",
+    "@tiptap/extension-italic": "^2.1.13",
+    "@tiptap/extension-link": "^2.1.13",
+    "@tiptap/extension-list-item": "^2.1.13",
+    "@tiptap/extension-ordered-list": "^2.1.13",
+    "@tiptap/extension-paragraph": "^2.1.13",
+    "@tiptap/extension-placeholder": "^2.1.13",
+    "@tiptap/extension-strike": "^2.1.13",
+    "@tiptap/extension-text": "^2.1.13",
+    "@tiptap/extension-text-align": "^2.1.13",
+    "@tiptap/extension-underline": "^2.1.13",
+    "@tiptap/pm": "^2.1.13",
+    "@tiptap/react": "^2.1.13",
+    "@tiptap/starter-kit": "^2.1.13",
+    "fastq": "^1.15.0",
+    "github-markdown-css": "^5.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "tiptap-react",
+  "version": "0.0.1",
+  "description": "a rich-text editor for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "editor",
+    "richtext",
+    "tiptap"
+  ],
+  "author": "Hilary Liu<2788370451@qq.com>",
+  "license": "MIT"
+}
