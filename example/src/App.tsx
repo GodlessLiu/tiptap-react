@@ -12,16 +12,13 @@ function App() {
 
   return (
     <>
-      {/* <button onClick={() => changeLanguage('en-US')}>en-US</button>
-      <button
-        onClick={() => changeLanguage('zh-CN')}
-        style={{ margin: '10px' }}
-      >
-        zh-CN
-      </button> */}
       <button onClick={() => read()}>get</button>
       <div style={{ height: '100vh', width: '80vw', margin: '0 auto' }}>
-        <RichTextEditor editor={editor!} I18n={true} />
+        <RichTextEditor
+          editor={editor!}
+          I18n={true}
+          styles={{ fontSize: '1.5rem' }}
+        />
       </div>
     </>
   );

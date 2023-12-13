@@ -10,7 +10,7 @@ import { UilLetterEnglishA } from '../icons/En-US';
 import { UilLetterChineseA } from '../icons/Zh-CN';
 import useLocalStorage from '../utils/UseLocalSorage';
 export default (props: EditorProps) => {
-  const { editor, showBubbleItem = false, I18n = true } = props;
+  const { editor, showBubbleItem = false, I18n = true, styles = {} } = props;
   const [language, setLangauge] = useState<Language>(
     (useLocalStorage.getLocal('language') as Language) || 'en-US'
   );
@@ -32,6 +32,7 @@ export default (props: EditorProps) => {
     <I18nContext.Provider value={data[language]}>
       <div
         className="rich-text-editor"
+        style={{ ...styles }}
         onClick={() => editor.chain().focus().run()}
       >
         {editor ? (

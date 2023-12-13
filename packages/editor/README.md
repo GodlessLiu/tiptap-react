@@ -4,6 +4,11 @@
 ## 安装
 `pnpm i laf-react-editor`
 
+## 特性
+- 支持基础的markdown语法
+- 支持自定义编辑器的插件
+- 支持i18n
+
 ## 使用
 ```typescript
 // main.tsx

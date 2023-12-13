@@ -5,6 +5,7 @@ export interface EditorProps {
   editor: Editor;
   showBubbleItem?: boolean;
   I18n?: boolean;
+  styles?: React.CSSProperties;
 }
 
 export interface HeaderProps {
