@@ -10,10 +10,13 @@ import {
   useInteractions,
   useRole,
 } from '@floating-ui/react';
+import { useContext } from 'react';
+import I18nContext from '../../components/i18n';
 const CommonToolBar = (props: BubbleItemProps) => {
   const { title, action, isActive, Icon } = props;
   const [isOpen, setIsOpen] = useState(false);
-
+  const data = useContext(I18nContext)!;
+  const forkData = data[title!];
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -52,7 +55,7 @@ const CommonToolBar = (props: BubbleItemProps) => {
               style={floatingStyles}
               {...getFloatingProps()}
             >
-              {title}
+              {forkData}
             </div>
           )}
         </FloatingPortal>

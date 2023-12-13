@@ -13,7 +13,7 @@ export default Strike.extend<StrikeOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'strike',
+            title: 'StrikeThrough',
             Icon: MdiFormatStrikethrough,
             isActive: () => editor.isActive('strike'),
             action: () => {

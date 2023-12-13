@@ -1,8 +1,10 @@
 import { useMemo } from 'react';
-import { EditorProps } from '../types';
+import { HeaderProps } from '../types';
 
-const Header: React.FC<EditorProps> = (props: EditorProps) => {
-  const editor = props.editor;
+const Header: React.FC<HeaderProps> = (props) => {
+  // const editor = props.editor;
+  const { editor, children } = props;
+
   const menus = useMemo(() => {
     if (!editor) return;
     const { extensions } = editor.extensionManager;
@@ -29,6 +31,7 @@ const Header: React.FC<EditorProps> = (props: EditorProps) => {
           const Comp = menu!.component!;
           return <Comp {...menu!.props} editor={editor} />;
         })}
+        <div className="ml-auto mr-2">{children}</div>
       </div>
     </>
   );

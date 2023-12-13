@@ -17,7 +17,7 @@ export default CodeBlockLowlight.extend<CodeBlockLowlightOptions & BaseOptions>(
             props: {
               editor,
               Icon: MdiCodeBracesBox,
-              title: 'codeBlock',
+              title: 'CodeBlock',
               isActive: () => editor.isActive('code-block'),
               action: () => {
                 editor.chain().focus().toggleCodeBlock().run();

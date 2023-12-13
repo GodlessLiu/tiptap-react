@@ -14,7 +14,7 @@ export default InlineCode.extend<CodeOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'inlineCode',
+            title: 'InlineCode',
             Icon: IcOutlineCode,
             isActive: () => editor.isActive('inlineCode'),
             action: () => {

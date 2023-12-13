@@ -15,7 +15,7 @@ export default Italic.extend<ItalicOptions & BaseOptions>({
           props: {
             Icon: MdiFormatItalic,
             editor,
-            title: 'italic',
+            title: 'Italic',
             isActive: () => editor.isActive('italic'),
             action: () => {
               editor.chain().focus().toggleItalic().run();

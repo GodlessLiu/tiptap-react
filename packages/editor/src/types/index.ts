@@ -1,8 +1,15 @@
+import React from 'react';
 import { Editor } from '..';
 
 export interface EditorProps {
   editor: Editor;
-  showBubbleItem?: Boolean;
+  showBubbleItem?: boolean;
+  I18n?: boolean;
+}
+
+export interface HeaderProps {
+  editor: Editor;
+  children?: React.ReactNode;
 }
 
 export interface BubbleItem {
@@ -26,3 +33,10 @@ export interface ImageExtraOptions {
 export interface BaseOptions {
   getToolbarItems?: (props: EditorProps) => BubbleItem[] | BubbleItem;
 }
+
+export type Data = {
+  'zh-CN': Record<string, string>;
+  'en-US': Record<string, string>;
+};
+
+export type Language = keyof Data;

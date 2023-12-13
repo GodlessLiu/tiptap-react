@@ -14,7 +14,7 @@ export default BulletList.extend<BulletListOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'ul',
+            title: 'UnorderedList',
             Icon: IcBaselineFormatListBulleted,
             isActive: () => editor.isActive('bullet-list'),
             action: () => {

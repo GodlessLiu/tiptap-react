@@ -15,7 +15,7 @@ export default OrderList.extend<OrderedListOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'ol',
+            title: 'OrderedList',
             Icon: MdiOrderNumericAscending,
             isActive: () => editor.isActive('orderedList'),
             action: () => {

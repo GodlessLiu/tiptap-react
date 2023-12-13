@@ -5,7 +5,7 @@ import { MdiFormatUnderline } from '../../icons/UnderlineCode';
 import { BaseOptions } from '../../types';
 
 export default Underline.extend<UnderlineOptions & BaseOptions>({
-  name: 'laf-underline',
+  name: 'underline',
   addOptions() {
     return {
       ...this.parent?.(),
@@ -15,9 +15,9 @@ export default Underline.extend<UnderlineOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'underline',
+            title: 'Underline',
             Icon: MdiFormatUnderline,
-            isActive: () => editor.isActive('laf-underline'),
+            isActive: () => editor.isActive('underline'),
             action: () => {
               editor.chain().focus().toggleUnderline().run();
             },

@@ -14,7 +14,7 @@ export default Bold.extend<BoldOptions & BaseOptions>({
           component: CommonToolBar,
           props: {
             editor,
-            title: 'bold',
+            title: 'Bold',
             Icon: MaterialSymbolsFormatBoldRounded,
             isActive: () => editor.isActive('laf-bold'),
             action: () => {
