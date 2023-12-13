@@ -19,6 +19,7 @@ import Horizontal from './Horizontal/Horizontal';
 import TaskList from './TaskList/TaskList';
 import History from './History/History';
 import lowlight from './CodeBlock/lowLight';
+import Iframe from './Iframe/Iframe';
 const allExtensions = [
   Text,
   Heading,
@@ -54,6 +55,7 @@ const allExtensions = [
   Horizontal,
   TaskList,
   History,
+  Iframe,
 ];
 
 export {
@@ -79,4 +81,5 @@ export {
   TaskList,
   History,
   lowlight,
+  Iframe,
 };

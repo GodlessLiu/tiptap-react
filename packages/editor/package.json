@@ -1,18 +1,13 @@
 {
-  "name": "@laf/rich-editor",
-  "version": "0.0.1",
-  "description": "a rich-text editor for React",
-  "main": "./dist/rich-text-editor.iife.js",
-  "module": "./dist/rich-text-editor.es.js",
-  "unpkg": "./dist/rich-text-editor.iife.js",
-  "jsdelivr": "./dist/rich-text-editor.iife.js",
-  "types": "./dist/index.d.ts",
+  "name": "laf-react-editor",
+  "version": "0.0.2",
+  "description": "a richtext editor for React",
+  "author": "Hilary Liu<2788370451@qq.com>",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "vite build"
-  },
+  "homepage": "https://github.com/GodlessLiu/tiptap-react",
+  "jsdelivr": "./dist/rich-text-editor.iife.js",
   "keywords": [
     "react",
     "editor",
@@ -25,29 +20,23 @@
     "ts",
     "js"
   ],
-  "author": "Hilary Liu<2788370451@qq.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@tsconfig/node18": "^18.2.2",
-    "@types/node": "^20.10.4",
-    "@types/react": "^18.2.42",
-    "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "sass": "^1.69.5",
-    "tailwindcss": "^3.3.6",
-    "typescript": "^5.3.3",
-    "unplugin-icons": "^0.18.1",
-    "vite": "^5.0.7",
-    "vite-plugin-dts": "^3.6.4"
+  "main": "./dist/rich-text-editor.iife.js",
+  "module": "./dist/rich-text-editor.es.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GodlessLiu/tiptap-react.git"
   },
+  "scripts": {
+    "build": "vite build"
+  },
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/rich-text-editor.iife.js",
   "dependencies": {
     "@floating-ui/react": "^0.26.3",
     "@tiptap/extension-blockquote": "^2.1.13",
     "@tiptap/extension-bold": "^2.1.13",
+    "@tiptap/extension-bubble-menu": "^2.1.13",
     "@tiptap/extension-bullet-list": "^2.1.13",
     "@tiptap/extension-code": "^2.1.13",
     "@tiptap/extension-code-block": "^2.1.13",
@@ -78,5 +67,22 @@
     "lowlight": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "unplugin-icons": "^0.18.1",
+    "vite": "^5.0.7",
+    "vite-plugin-dts": "^3.6.4"
   }
 }

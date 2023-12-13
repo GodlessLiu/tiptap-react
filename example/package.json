@@ -1,6 +1,5 @@
 {
   "name": "@laf/example",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@laf/rich-editor": "workspace:^",
+    "laf-react-editor": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

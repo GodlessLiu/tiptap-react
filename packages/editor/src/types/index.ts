@@ -2,6 +2,7 @@ import { Editor } from '..';
 
 export interface EditorProps {
   editor: Editor;
+  showBubbleItem?: Boolean;
 }
 
 export interface BubbleItem {

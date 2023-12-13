@@ -1,8 +1,8 @@
-import { useEditor, RichTextEditor, allExtensions } from '@laf/rich-editor';
+import { useEditor, RichTextEditor, allExtensions } from 'laf-react-editor';
 
 function App() {
   const editor = useEditor({
-    content: '',
+    content: '<p>hello world</p>',
     extensions: allExtensions,
   });
 
