@@ -1,6 +1,6 @@
 import { createContext } from 'react';
+import { DataItem } from '../types';
 
-type DataContext = Record<string, string>;
-const I18nContext = createContext<DataContext | null>(null);
+const I18nContext = createContext<DataItem | null>(null);
 
 export default I18nContext;

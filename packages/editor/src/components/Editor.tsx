@@ -10,6 +10,7 @@ import { UilLetterEnglishA } from '../icons/En-US';
 import { UilLetterChineseA } from '../icons/Zh-CN';
 import useLocalStorage from '../utils/UseLocalSorage';
 import WithToolTip from './WithToolTip';
+import Help from './Help';
 export default (props: EditorProps) => {
   const {
     editor,
@@ -47,6 +48,7 @@ export default (props: EditorProps) => {
         );
     }
   }
+
   return (
     <I18nContext.Provider value={data[language]}>
       <div
@@ -57,7 +59,10 @@ export default (props: EditorProps) => {
         {editor ? (
           <>
             <Header editor={editor}>
-              {I18n ? <>{IconLanguageShow(language)}</> : null}
+              <div className="flex">
+                <Help />
+                {I18n ? <>{IconLanguageShow(language)}</> : null}
+              </div>
             </Header>
             {showBubbleItem ? <SelfBubbleMenu editor={editor} /> : null}
             <EditorContent className="markdown-body" editor={editor} />

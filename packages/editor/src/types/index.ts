@@ -36,9 +36,11 @@ export interface BaseOptions {
   getToolbarItems?: (props: EditorProps) => BubbleItem[] | BubbleItem;
 }
 
+export type DataItem = Record<string, any>;
+
 export type Data = {
-  'zh-CN': Record<string, string>;
-  'en-US': Record<string, string>;
+  'zh-CN': DataItem;
+  'en-US': DataItem;
 };
 
 export type Language = keyof Data;
@@ -47,3 +49,9 @@ export interface WithToolTipProps {
   title: string;
   children: React.ReactNode;
 }
+
+interface HelperItem {
+  command: string;
+  options: string[];
+}
+export type Helper = HelperItem[];

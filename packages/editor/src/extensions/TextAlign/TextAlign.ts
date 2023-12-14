@@ -9,7 +9,6 @@ import {
 import { BaseOptions } from '../../types';
 
 export default TextAlign.extend<TextAlignOptions & BaseOptions>({
-  name: 'laf-text-align',
   addOptions() {
     return {
       ...this.parent?.(),

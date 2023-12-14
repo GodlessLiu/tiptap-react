@@ -4,7 +4,6 @@ import CommonToolBar from '../components/CommonToolBar';
 import { MaterialSymbolsFormatBoldRounded } from '../../icons/BoldIcon';
 import { BaseOptions } from '../../types';
 export default Bold.extend<BoldOptions & BaseOptions>({
-  name: 'laf-bold',
   addOptions() {
     return {
       ...this.parent?.(),
@@ -16,7 +15,7 @@ export default Bold.extend<BoldOptions & BaseOptions>({
             editor,
             title: 'Bold',
             Icon: MaterialSymbolsFormatBoldRounded,
-            isActive: () => editor.isActive('laf-bold'),
+            isActive: () => editor.isActive('bold'),
             action: () => {
               editor.chain().focus().toggleBold().run();
             },

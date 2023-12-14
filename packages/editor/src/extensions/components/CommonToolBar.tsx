@@ -7,7 +7,7 @@ const CommonToolBar = (props: BubbleItemProps) => {
   const { title, action, isActive, Icon } = props;
 
   const data = useContext(I18nContext)!;
-  const forkData = data[title!];
+  const forkData = data['header'][title!];
 
   return (
     <>

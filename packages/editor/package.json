@@ -1,6 +1,6 @@
 {
   "name": "laf-react-editor",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "description": "a richtext editor for React",
   "author": "Hilary Liu<2788370451@qq.com>",
   "files": [
@@ -66,7 +66,8 @@
     "highlight.js": "^11.9.0",
     "lowlight": "^3.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1"
   },
   "devDependencies": {
     "@svgr/core": "^8.1.0",
@@ -75,6 +76,7 @@
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
+    "@types/react-modal": "^3.16.3",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
