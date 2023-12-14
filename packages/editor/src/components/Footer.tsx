@@ -1,16 +1,16 @@
-import { GrommetIconsGithub } from '../icons/github';
-
-export default function () {
+import React from 'react';
+import { GrommetIconsGithub } from '../icons/Github';
+const Footer: React.FC = () => {
   return (
     <>
-      <div className="editor-footer flex justify-center items-center">
+      <div className="text-sm py-[10px] editor-footer flex justify-center items-center">
         <a
           href="https://github.com/GodlessLiu/tiptap-react"
           className="mx-2 underline hover:text-red-400"
         >
-          tiptap-react
+          laf-react-editor
         </a>
-        <GrommetIconsGithub className="mx-1" /> Prower &nbsp;by
+        <GrommetIconsGithub className="mx-1" /> Power &nbsp;By
         <a
           href="https://github.com/GodlessLiu"
           className="text-red mx-2 underline hover:text-red-400"
@@ -20,4 +20,6 @@ export default function () {
       </div>
     </>
   );
-}
+};
+
+export default Footer;

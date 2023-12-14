@@ -1,25 +1,21 @@
 .rich-text-editor {
   box-sizing: border-box;
-  height: calc(100% - 48px);
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: relative;
   .editor-header {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
+    position: sticky;
+    background-color: #fff;
+    z-index: 999999;
+    width: 100%;
+    top: 0;
     .is-active {
       color: blue;
     }
   }
-  .editor-footer {
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0px;
-  }
+
   .tiptap {
     height: 100%;
     outline: none !important;

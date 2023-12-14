@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { HeaderProps } from '../types';
 
 const Header: React.FC<HeaderProps> = (props) => {
-  // const editor = props.editor;
   const { editor, children } = props;
 
   const menus = useMemo(() => {
@@ -26,12 +25,12 @@ const Header: React.FC<HeaderProps> = (props) => {
 
   return (
     <>
-      <div className="pt-4 editor-header flex flex-row gap-2 flex-wrap">
+      <div className="pt-4 shadow-sm editor-header flex px-4 flex-row gap-2 flex-wrap">
         {menus?.map((menu) => {
           const Comp = menu!.component!;
           return <Comp {...menu!.props} editor={editor} />;
         })}
-        <div className="ml-auto mr-2">{children}</div>
+        <div className="ml-auto">{children}</div>
       </div>
     </>
   );

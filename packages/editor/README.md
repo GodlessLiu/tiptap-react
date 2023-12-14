@@ -1,4 +1,4 @@
-# @laf/richtext-editor
+# laf-react-editor
 用于react项目的富文本编辑器，基于 Tiptap。
 
 ## 安装

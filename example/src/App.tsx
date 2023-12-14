@@ -1,8 +1,8 @@
 import { useEditor, RichTextEditor, allExtensions } from 'laf-react-editor';
-
+import content from './content';
 function App() {
   const editor = useEditor({
-    content: '<p>hello world</p>',
+    content: content,
     extensions: allExtensions,
   });
 
@@ -13,7 +13,14 @@ function App() {
   return (
     <>
       <button onClick={() => read()}>get</button>
-      <div style={{ height: '100vh', width: '80vw', margin: '0 auto' }}>
+      <div
+        style={{
+          height: '100vh',
+          width: '80vw',
+          margin: '0 auto',
+          paddingTop: '100px',
+        }}
+      >
         <RichTextEditor
           editor={editor!}
           I18n={true}

@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { UilLetterEnglishA } from '../icons/En-US';
 import { UilLetterChineseA } from '../icons/Zh-CN';
 import useLocalStorage from '../utils/UseLocalSorage';
+import WithToolTip from './WithToolTip';
 export default (props: EditorProps) => {
   const { editor, showBubbleItem = false, I18n = true, styles = {} } = props;
   const [language, setLangauge] = useState<Language>(
@@ -21,11 +22,23 @@ export default (props: EditorProps) => {
   function IconLanguageShow(language: Language) {
     switch (language) {
       case 'en-US':
-        return <UilLetterEnglishA onClick={() => changeLanguage('zh-CN')} />;
+        return (
+          <WithToolTip title="英文模式">
+            <UilLetterEnglishA onClick={() => changeLanguage('zh-CN')} />
+          </WithToolTip>
+        );
       case 'zh-CN':
-        return <UilLetterChineseA onClick={() => changeLanguage('en-US')} />;
+        return (
+          <WithToolTip title="中文模式">
+            <UilLetterChineseA onClick={() => changeLanguage('en-US')} />
+          </WithToolTip>
+        );
       default:
-        return <UilLetterChineseA onClick={() => changeLanguage('en-US')} />;
+        return (
+          <WithToolTip title="中文模式">
+            <UilLetterChineseA onClick={() => changeLanguage('en-US')} />
+          </WithToolTip>
+        );
     }
   }
   return (
