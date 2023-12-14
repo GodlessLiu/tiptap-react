@@ -6,6 +6,7 @@ export interface EditorProps {
   showBubbleItem?: boolean;
   I18n?: boolean;
   styles?: React.CSSProperties;
+  showFooter?: boolean;
 }
 
 export interface HeaderProps {
@@ -41,3 +42,8 @@ export type Data = {
 };
 
 export type Language = keyof Data;
+
+export interface WithToolTipProps {
+  title: string;
+  children: React.ReactNode;
+}

@@ -11,7 +11,13 @@ import { UilLetterChineseA } from '../icons/Zh-CN';
 import useLocalStorage from '../utils/UseLocalSorage';
 import WithToolTip from './WithToolTip';
 export default (props: EditorProps) => {
-  const { editor, showBubbleItem = false, I18n = true, styles = {} } = props;
+  const {
+    editor,
+    showBubbleItem = false,
+    I18n = true,
+    styles = {},
+    showFooter = false,
+  } = props;
   const [language, setLangauge] = useState<Language>(
     (useLocalStorage.getLocal('language') as Language) || 'en-US'
   );
@@ -55,7 +61,7 @@ export default (props: EditorProps) => {
             </Header>
             {showBubbleItem ? <SelfBubbleMenu editor={editor} /> : null}
             <EditorContent className="markdown-body" editor={editor} />
-            <Footer />
+            {showFooter ? <Footer /> : null}
           </>
         ) : null}
       </div>

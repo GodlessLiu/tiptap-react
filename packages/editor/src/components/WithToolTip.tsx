@@ -1,6 +1,8 @@
 import {
   FloatingPortal,
+  autoPlacement,
   autoUpdate,
+  offset,
   useDismiss,
   useFloating,
   useFocus,
@@ -9,23 +11,22 @@ import {
   useRole,
 } from '@floating-ui/react';
 import { useState } from 'react';
-
-interface WithToolTipProps {
-  title: string;
-  children: React.ReactNode;
-  placement?: 'top' | 'bottom' | 'left' | 'right';
-}
+import { WithToolTipProps } from '../types';
 
 const WithToolTip: React.FC<WithToolTipProps> = (props) => {
-  const { title, children, placement = 'top' } = props;
+  const { title, children } = props;
   const [isOpen, setIsOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
-    placement: placement,
     // Make sure the tooltip stays on the screen
     whileElementsMounted: autoUpdate,
-    middleware: [],
+    middleware: [
+      autoPlacement({
+        allowedPlacements: ['top', 'bottom'],
+      }),
+      offset(5),
+    ],
   });
   // Event listeners to change the open state
   const hover = useHover(context, { move: false });

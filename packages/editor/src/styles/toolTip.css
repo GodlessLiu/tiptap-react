@@ -5,4 +5,5 @@
     font-size: 90%;
     padding: 4px 8px;
     border-radius: 4px;
+    z-index: 10;
   }
