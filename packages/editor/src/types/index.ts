@@ -7,6 +7,7 @@ export interface EditorProps {
   I18n?: boolean;
   styles?: React.CSSProperties;
   showFooter?: boolean;
+  showHelper?: boolean;
 }
 
 export interface HeaderProps {

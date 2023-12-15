@@ -24,6 +24,7 @@ function App() {
         <RichTextEditor
           editor={editor!}
           I18n={true}
+          showHelper={true}
           styles={{ fontSize: '1.5rem' }}
         />
       </div>

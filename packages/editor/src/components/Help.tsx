@@ -18,6 +18,7 @@ const Help: React.FC = () => {
   }
   useEffect(() => {
     window.addEventListener('keydown', keyDownFn);
+
     return () => window.removeEventListener('keydown', keyDownFn);
   }, []);
 
@@ -42,13 +43,20 @@ const Help: React.FC = () => {
                   <span className=" inline-block text-lg w-32 text-left">
                     {data['helper'][command] + ':'}
                   </span>
-                  {options.map((option) => {
-                    return (
-                      <span className="p-2 bg-gray-200 rounded ml-2 text-xs ">
-                        {option}
-                      </span>
-                    );
-                  })}
+                  {options
+                    .join('?+?')
+                    .split('?')
+                    .map((option) => {
+                      return (
+                        <span
+                          className={`p-2 ${
+                            option !== '+' && 'bg-gray-200'
+                          } rounded ml-2 text-xs`}
+                        >
+                          {option}
+                        </span>
+                      );
+                    })}
                 </div>
               );
             })}

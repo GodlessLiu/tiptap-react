@@ -18,6 +18,7 @@ export default (props: EditorProps) => {
     I18n = true,
     styles = {},
     showFooter = false,
+    showHelper = true,
   } = props;
   const [language, setLangauge] = useState<Language>(
     (useLocalStorage.getLocal('language') as Language) || 'en-US'
@@ -60,7 +61,7 @@ export default (props: EditorProps) => {
           <>
             <Header editor={editor}>
               <div className="flex">
-                <Help />
+                {showHelper && <Help />}
                 {I18n ? <>{IconLanguageShow(language)}</> : null}
               </div>
             </Header>
